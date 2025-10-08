@@ -2,7 +2,7 @@
 <style>
   .filter {
     text-align: center;
-    margin-top: 1rem;
+
     opacity: 0.58;
   }
 
@@ -32,105 +32,123 @@
     height: 3rem;
     padding: 0.6rem 1.2rem;
     border-radius: 0.7rem;
-    /* Ensure the switch and label are in a single line */
     white-space: nowrap;
   }
 </style>
 <div class="sub-nav d-flex justify-content-between align-items-center">
-  <div class="dropdown mt-3">
-    <button
-      class="btn dropdown-toggle add-btn text-white"
-      type="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Filters
-    </button>
-    <div class="dropdown-menu">
-      <div class="d-flex">
-        <a href="/listings?category=Trending">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-fire"></i>
+  <button
+    type="button"
+    class="btn add-btn text-white"
+    data-bs-toggle="modal"
+    data-bs-target="#filtersModal"
+    style="margin-top: 20px"
+  >
+    Filters <i class="fa-solid fa-sliders"></i>
+  </button>
+  <div
+    class="modal fade"
+    id="filtersModal"
+    tabindex="-1"
+    aria-labelledby="filtersModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="filtersModalLabel">Filters</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div
+            class="row row-cols-3 row-cols-sm-4 row-cols-md-5 g-4 text-center"
+          >
+            <div class="col">
+              <a href="/listings?category=Trending">
+                <div class="filter">
+                  <div><i class="fa-solid fa-fire"></i></div>
+                  <p>Trending</p>
+                </div>
+              </a>
             </div>
-            <p>Trending</p>
+            <div class="col">
+              <a href="/listings?category=Lodge">
+                <div class="filter">
+                  <div><i class="fa-solid fa-bed"></i></div>
+                  <p>Lodge</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Iconic Cities">
+                <div class="filter">
+                  <div><i class="fa-solid fa-mountain-city"></i></div>
+                  <p>Iconic Cities</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Mountain-city">
+                <div class="filter">
+                  <div><i class="fa-solid fa-mountain"></i></div>
+                  <p>Mountain-city</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Beaches">
+                <div class="filter">
+                  <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                  <p>Beaches</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Amazing Pools">
+                <div class="filter">
+                  <div><i class="fa-solid fa-person-swimming"></i></div>
+                  <p>Amazing Pools</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Castles">
+                <div class="filter">
+                  <div><i class="fa-brands fa-fort-awesome"></i></div>
+                  <p>Castles</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Camping">
+                <div class="filter">
+                  <div><i class="fa-solid fa-tents"></i></div>
+                  <p>Camping</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Towers">
+                <div class="filter">
+                  <div><i class="fa-solid fa-tower-observation"></i></div>
+                  <p>Towers</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="/listings?category=Boats">
+                <div class="filter">
+                  <div><i class="fa-solid fa-sailboat"></i></div>
+                  <p>Boats</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
-        <a href="/listings?category=Lodge">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-bed"></i>
-            </div>
-            <p>Lodge</p>
-          </div>
-        </a>
-        <a href="/listings?category=Iconic Cities">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-mountain-city"></i>
-            </div>
-
-            <p>Iconic Cities</p>
-          </div>
-        </a>
-        <a href="/listings?category=Mountain-city">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-mountain"></i>
-            </div>
-            <p>Mountain-city</p>
-          </div>
-        </a>
-        <a href="/listings?category=Beaches">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-umbrella-beach"></i>
-            </div>
-            <p>Beaches</p>
-          </div>
-        </a>
-        <a href="/listings?category=Amazing Pools">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-person-swimming"></i>
-            </div>
-            <p>Amazing Pools</p>
-          </div>
-        </a>
-        <a href="/listings?category=Castles">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-brands fa-fort-awesome"></i>
-            </div>
-            <p>Castles</p>
-          </div>
-        </a>
-        <a href="/listings?category=Camping">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-tents"></i>
-            </div>
-            <p>Camping</p>
-          </div>
-        </a>
-        <a href="/listings?category=Towers">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-tower-observation"></i>
-            </div>
-
-            <p>Towers</p>
-          </div></a
-        >
-        <a href="/listings?category=Boats">
-          <div class="dropdown-item filter">
-            <div>
-              <i class="fa-solid fa-sailboat"></i>
-            </div>
-
-            <p>Boats</p>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
